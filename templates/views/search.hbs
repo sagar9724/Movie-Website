@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header}}
+    <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body>
+
+    {{!-- Navbar --}}
+    <nav>
+        <a href="#" class="logo">
+            <i class="fas fa-clipboard-check"></i>
+            {{!-- menu btn --}}
+            
+            {{!-- <img src="" alt=""> --}}
+        </a>
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+            <label class="menu-icon" for="menu-btn">
+                <span class="nav-icon"></span>
+            </label>
+        <ul class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Latest</a></li>
+            <li><a href="/">Upcoming</a></li>
+        </ul>
+        {{!-- Search --}}
+        <div class="search">
+            <form action="/search" method="POST">
+            <input type="text" placeholder="Search" name="search">
+            <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </nav>
+
+    {{!-- Movies --}}
+
+    <div class="movies-heading">
+        <h2>Results</h2>
+    </div>
+
+    <section id="movies-list">
+        <p id="searchResult">{{searchResult}}</p>
+        {{!-- <div class="movies-box">
+            <div class="movies-img">
+                <img src="https://image.tmdb.org/t/p/original/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg" alt="">
+            </div>
+            <div class="overlay">
+                <form action="/detail" method="post">
+                    <input class="m-name" type="text" name="">
+                    <input class="m-Id" type="text" name="">
+                    <button class="preview-btn" type="submit">Preview</button>
+                </form>
+            </div>
+        </div> --}}
+
+    </section>
+
+    <footer>
+        <p>All Right Reserved</p>
+    </footer>
+    <script src="js/searchData.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header}}
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/lightslider.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/lightslider.js"></script>
+</head>
+
+<body>
+
+    {{!-- Navbar --}}
+    <nav>
+        <a href="#" class="logo">
+            <i class="fas fa-clipboard-check"></i>
+            {{!-- menu btn --}}
+
+            {{!-- <img src="" alt=""> --}}
+        </a>
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label class="menu-icon" for="menu-btn">
+            <span class="nav-icon"></span>
+        </label>
+        <ul class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Latest</a></li>
+            <li><a href="/">Upcoming</a></li>
+        </ul>
+        {{!-- Search --}}
+        <div class="search">
+            <form action="/search" method="POST">
+                <input type="text" placeholder="Search" name="search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </nav>
+
+    <section id="main">
+        <p id="top_rated">{{top_rated}}</p>
+        <h1 class="showcase-heading">Showcase</h1>
+        <ul id="autoWidth" class="cs-hidden">
+            {{!-- <li class="item-a">
+                <div class="showcase-box">
+                    <div class="showcase-img">
+                        <img src="https://image.tmdb.org/t/p/original/poec6RqOKY9iSiIUmfyfPfiLtvB.jpg" alt="">
+
+                    </div>
+                    <div class="overlay">
+                        <form action="/detail" method="post">
+                            <input class="m-name" type="text" name="">
+                            <input class="m-Id" type="text" name="">
+                            <button class="preview-btn" type="submit">Preview</button>
+                        </form>
+                    </div>
+                </div>
+            </li> --}}
+
+        </ul>
+    </section>
+
+    <section id="latest">
+        <h2 class="latest-heading">Latest Movies</h2>
+        <p id="popularData">{{popularData}}</p>
+        <ul id="autoWidth2" class="cs-hidden">
+            {{!-- <li class="item-a">
+                <div class="latest-box">
+                    <div class="latest-b-img">
+                        <img src="https://image.tmdb.org/t/p/original/uRkDrsKwCCZC9zdHZs2CFTt1ATZ.jpg" alt="">
+                    </div>
+                    <div class="overlay">
+                        <form action="/detail" method="post">
+                            <input class="m-name" type="text" name="">
+                            <input class="m-Id" type="text" name="">
+                            <button class="preview-btn" type="submit">Preview</button>
+                        </form>
+                    </div>
+                </div>
+            </li> --}}
+
+        </ul>
+    </section>
+
+    {{!-- Movies --}}
+
+    <div class="movies-heading">
+        <h2>Upcoming</h2>
+    </div>
+
+    <section id="movies-list">
+        <p id="upcomingData">{{upcomingData}}</p>
+        <div class="movies-box">
+            <div class="movies-img">
+                <img src="https://image.tmdb.org/t/p/original/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg" alt="">
+            </div>
+            <div class="overlay">
+                <form action="/detail" method="post">
+                    <input class="m-name" type="text" name="">
+                    <input class="m-Id" type="text" name="">
+                    <button class="preview-btn" type="submit">Preview</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+    {{!-- btns --}}
+    {{!-- <div class="btns">
+        <a href="#">Previous</a>
+        <a href="#">Next</a>
+    </div> --}}
+
+
+    <footer>
+        <p>All Right Reserved</p>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

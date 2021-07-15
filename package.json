@@ -1,0 +1,19 @@
+{
+  "name": "expressweb",
+  "version": "1.0.0",
+  "description": "This is the Weather Website by Express.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "author": "Sagar",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "redux-saga": "^1.1.3"
+  }
+}

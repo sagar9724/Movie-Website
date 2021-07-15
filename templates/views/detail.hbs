@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header}}
+    <link rel="stylesheet" href="css/detail.css">
+</head>
+
+<body>
+
+    {{!-- Navbar --}}
+    <nav>
+        <a href="#" class="logo">
+            <i class="fas fa-clipboard-check"></i>
+            {{!-- menu btn --}}
+
+            {{!-- <img src="" alt=""> --}}
+        </a>
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label class="menu-icon" for="menu-btn">
+            <span class="nav-icon"></span>
+        </label>
+        <ul class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Latest</a></li>
+            <li><a href="/">Upcoming</a></li>
+        </ul>
+        {{!-- Search --}}
+        <div class="search">
+            <form action="/search" method="POST">
+                <input type="text" placeholder="Search" name="search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="movies-heading" id="movies-heading">
+        
+    </div>
+    <section id="movies-list">
+        <p id="searchResult">{{searchResult}}</p>
+        {{!-- <div class="movies-box">
+            <div class="movies-img">
+                <img src="https://image.tmdb.org/t/p/original/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg" alt="">
+            </div>
+            <span>Budget</span>
+            <h1>{{budget}}</h1>
+        </div>
+        <div class="movie-info">
+            <h1><span>Rating - </span> {{vote_average}}</h1>
+            <h1><span>Production Companies - </span>{{production_companies}}</h1>
+            <h1><span>Release Date - </span>{{release_date}}</h1>
+            <h1><span>Revenue - </span>{{revenue}}</h1>
+            <p><span>Overview - </span>{{overview}}</p>
+        </div> --}}
+    </section>
+    <footer>
+        <p>All Right Reserved</p>
+    </footer>
+    <script src="js/detail.js"></script>
+
+</body>
+
+</html>
