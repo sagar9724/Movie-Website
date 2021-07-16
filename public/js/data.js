@@ -181,10 +181,6 @@ const banner = ()=>{
 
 banner();
 
-// img.addEventListener('click',()=>{
-//     // window.location = '/detail'
-//     alert();
-// })
 
 // $(".showcase-box").on('click', function(event){
 //     const id = $('img').id;
@@ -192,3 +188,4 @@ banner();
 //     window.location = '/detail';
 //     //(... rest of your JS code)
 // });
+
